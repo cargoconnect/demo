@@ -130,6 +130,73 @@ angular.module('app')
                   templateUrl: 'tpl/trip/report.html',
                   resolve: load('js/controllers/chart.js')
               })
+              // claim
+              .state('app.claim', {
+                  url: '/claim',
+                  template: '<div ui-view></div>'
+              })
+              .state('app.claim.claim', {
+                  url: '/claim',
+                  templateUrl: 'tpl/trip/claim.html'
+              })
+              .state('app.claim.report', {
+                  url: '/report',
+                  templateUrl: 'tpl/claim/report.html',
+                  resolve: load('js/controllers/chart.js')
+              })
+              // cost
+              .state('app.cost', {
+                  url: '/cost',
+                  template: '<div ui-view></div>'
+              })
+              .state('app.cost.cost', {
+                  url: '/trip',
+                  templateUrl: 'tpl/cost/cost.html'
+              })
+              .state('app.cost.revenue', {
+                  url: '/cost',
+                  templateUrl: 'tpl/cost/revenue.html'
+              })
+              .state('app.cost.report', {
+                  url: '/report',
+                  templateUrl: 'tpl/cost/report.html',
+                  resolve: load('js/controllers/chart.js')
+              })
+              // map
+              .state('app.map', {
+                  url: '/map',
+                  template: '<div ui-view></div>'
+              })
+              .state('app.map.customer', {
+                  url: '/map',
+                  templateUrl: 'tpl/map/customer.html'
+              })
+              .state('app.map.driver', {
+                  url: '/map',
+                  templateUrl: 'tpl/map/driver.html'
+              })
+              // master
+              .state('app.master', {
+                  url: '/master',
+                  template: '<div ui-view></div>'
+              })
+              .state('app.master.user', {
+                  url: '/user',
+                  templateUrl: 'tpl/master/trip.html'
+              })
+              .state('app.master.customer', {
+                  url: '/customer',
+                  templateUrl: 'tpl/master/shipment.html'
+              })
+              .state('app.master.driver', {
+                  url: '/driver',
+                  templateUrl: 'tpl/master/shipment.html'
+              })
+              .state('app.master.report', {
+                  url: '/report',
+                  templateUrl: 'tpl/master/report.html',
+                  resolve: load('js/controllers/chart.js')
+              })
               // table
               .state('app.table', {
                   url: '/table',
