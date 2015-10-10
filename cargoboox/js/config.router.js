@@ -22,7 +22,7 @@ angular.module('app')
               .otherwise('/app/dashboard-v3');
           }else{
             $urlRouterProvider
-              .otherwise('/app/nove-v1');
+              .otherwise('/app/dashboard-v1');
           }
           
           $stateProvider
@@ -30,11 +30,6 @@ angular.module('app')
                   abstract: true,
                   url: '/app',
                   templateUrl: layout
-              })
-              .state('app.nove-v1', {
-                  url: '/nove-v1',
-                  templateUrl: 'tpl/app_dashboard_v1.html',
-                  resolve: load(['js/controllers/chart.js'])
               })
               .state('app.dashboard-v1', {
                   url: '/dashboard-v1',
@@ -115,6 +110,24 @@ angular.module('app')
               .state('app.chart', {
                   url: '/chart',
                   templateUrl: 'tpl/ui_chart.html',
+                  resolve: load('js/controllers/chart.js')
+              })
+              // trip
+              .state('app.trip', {
+                  url: '/trip',
+                  template: '<div ui-view></div>'
+              })
+              .state('app.trip.trip', {
+                  url: '/trip',
+                  templateUrl: 'tpl/trip/trip.html'
+              })
+              .state('app.trip.shipment', {
+                  url: '/shipment',
+                  templateUrl: 'tpl/trip/shipment.html'
+              })
+              .state('app.trip.report', {
+                  url: '/report',
+                  templateUrl: 'tpl/trip/report.html',
                   resolve: load('js/controllers/chart.js')
               })
               // table
