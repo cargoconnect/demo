@@ -137,7 +137,7 @@ angular.module('app')
               })
               .state('app.claim.claim', {
                   url: '/claim',
-                  templateUrl: 'tpl/trip/claim.html'
+                  templateUrl: 'tpl/claim/claim.html'
               })
               .state('app.claim.report', {
                   url: '/report',
@@ -150,11 +150,11 @@ angular.module('app')
                   template: '<div ui-view></div>'
               })
               .state('app.cost.cost', {
-                  url: '/trip',
+                  url: '/cost',
                   templateUrl: 'tpl/cost/cost.html'
               })
               .state('app.cost.revenue', {
-                  url: '/cost',
+                  url: '/revenue',
                   templateUrl: 'tpl/cost/revenue.html'
               })
               .state('app.cost.report', {
@@ -168,11 +168,11 @@ angular.module('app')
                   template: '<div ui-view></div>'
               })
               .state('app.map.customer', {
-                  url: '/map',
-                  templateUrl: 'tpl/map/customer.html'
+                  url: '/customer',
+                  templateUrl: 'tpl/map/customer.html',
               })
               .state('app.map.driver', {
-                  url: '/map',
+                  url: '/driver',
                   templateUrl: 'tpl/map/driver.html'
               })
               // master
@@ -182,15 +182,19 @@ angular.module('app')
               })
               .state('app.master.user', {
                   url: '/user',
-                  templateUrl: 'tpl/master/trip.html'
+                  templateUrl: 'tpl/master/user.html'
               })
               .state('app.master.customer', {
                   url: '/customer',
-                  templateUrl: 'tpl/master/shipment.html'
+                  templateUrl: 'tpl/master/customer.html'
               })
               .state('app.master.driver', {
                   url: '/driver',
-                  templateUrl: 'tpl/master/shipment.html'
+                  templateUrl: 'tpl/master/driver.html'
+              })
+              .state('app.master.truck', {
+                  url: '/truck',
+                  templateUrl: 'tpl/master/truck.html'
               })
               .state('app.master.report', {
                   url: '/report',
