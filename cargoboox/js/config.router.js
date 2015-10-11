@@ -170,10 +170,12 @@ angular.module('app')
               .state('app.map.customer', {
                   url: '/customer',
                   templateUrl: 'tpl/map/customer.html',
+                  resolve: load('js/controllers/map.js')
               })
-              .state('app.map.driver', {
-                  url: '/driver',
-                  templateUrl: 'tpl/map/driver.html'
+              .state('app.map.shipment', {
+                  url: '/sipment',
+                  templateUrl: 'tpl/map/shipment.html',
+                  resolve: load('js/controllers/map.js')
               })
               // master
               .state('app.master', {
