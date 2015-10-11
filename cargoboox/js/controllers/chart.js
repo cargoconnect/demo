@@ -24,11 +24,9 @@ app
     }   
 
     $scope.d3 = [ 
-      { label: "iPhone5S", data: 40 }, 
-      { label: "iPad Mini", data: 10 },
-      { label: "iPad Mini Retina", data: 20 },
-      { label: "iPhone4S", data: 12 },
-      { label: "iPad Air", data: 18 }
+      { label: "Loyal Customer", data: 40 }, 
+      { label: "Medium Customer", data: 10 },
+      { label: "New Customer", data: 20 },
     ];
 
     $scope.refreshData = function(){
