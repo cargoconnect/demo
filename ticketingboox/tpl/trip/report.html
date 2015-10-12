@@ -1,0 +1,136 @@
+﻿<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h3">Shipment Data Report</h1>
+</div>
+<div class="wrapper-md">
+    <div ng-controller="FlotChartDemoCtrl">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold">Shipment</div>
+                    <div class="panel-body">
+                        <div ui-jq="plot" ui-options="
+              [
+                { data: {{d0_1}}, label: 'A', points: { show: true }, lines: { show: true, fill: true, fillColor: { colors: [{ opacity: 0.1 }, { opacity: 0.1}] } } },
+                { data: {{d0_2}}, label: 'B', points: { show: true, radius: 4 } }
+              ],
+              {
+                colors: [ '{{app.color.info}}','{{app.color.warning}}' ],
+                series: { shadowSize: 2 },
+                xaxis:{ font: { color: '#ccc' } },
+                yaxis:{ font: { color: '#ccc' } },
+                grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#ccc' },
+                tooltip: true,
+                tooltipOpts: { content: '%s of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 0, y: 20 } }
+              }
+            " style="height:240px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading font-bold">Customer</div>
+                    <div class="panel-body">
+                        <div ui-jq="plot" ui-options="
+              {{d3}},
+              {
+                series: { pie: { show: true, innerRadius: 0.5, stroke: { width: 0 }, label: { show: true, threshold: 0.05 } } },
+                colors: ['{{app.color.primary}}','{{app.color.info}}','{{app.color.success}}','{{app.color.warning}}','{{app.color.danger}}'],
+                grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#ccc' },
+                tooltip: true,
+                tooltipOpts: { content: '%s: %p.0%' }
+              }
+            " style="height:240px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold">
+                    On Progress Shipment
+                </div>
+                <div class="panel-body text-center">
+                    <h4>62.5<small> hrs</small></h4>
+                    <small class="text-muted block">Updated at 2 minutes ago</small>
+                    <div class="inline">
+                        <div ui-jq="easyPieChart" ui-options="{
+                      percent: 75,
+                      lineWidth: 10,
+                      trackColor: '{{app.color.light}}',
+                      barColor: '{{app.color.warning}}',
+                      scaleColor: '{{app.color.light}}',
+                      size: 188,
+                      lineCap: 'butt'
+                    }">
+                            <div>
+                                <span class="h2 m-l-sm step">75</span>%
+                                <div class="text text-sm">new</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer"><small>% of avarage rate of the Conversion</small></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold">
+                    Success Shipment
+                </div>
+                <div class="panel-body text-center">
+                    <h4><small>last </small>12<small> hrs</small></h4>
+                    <small class="text-muted block">yesterday: 20%</small>
+                    <div class="inline">
+                        <div ui-jq="easyPieChart" ui-options="{
+                      percent: 25,
+                      lineWidth: 10,
+                      trackColor: '{{app.color.light}}',
+                      barColor: '{{app.color.success}}',
+                      scaleColor: '{{app.color.light}}',
+                      size: 188,
+                      lineCap: 'butt',
+                      animate: 1000
+                    }">
+                            <div>
+                                <span class="h2 m-l-sm step">25</span>%
+                                <div class="text text-sm">today</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer"><small>% of change</small></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading font-bold">
+                    Failed Shipment
+                </div>
+                <div class="panel-body text-center">
+                    <h4>3,450</h4>
+                    <small class="text-muted block">Worldwide visitors</small>
+                    <div class="inline m-t m-b">
+                        <div ui-jq="easyPieChart" ui-options="{
+                      percent: 50,
+                      lineWidth: 10,
+                      trackColor: '{{app.color.light}}',
+                      barColor: '{{app.color.danger}}',
+                      scaleColor: false,
+                      size: 158,
+                      rotate: 90,
+                      lineCap: 'butt'
+                    }">
+                            <div>
+                                <span class="h2 m-l-sm step">50</span>%
+                                <div class="text text-sm">new visits</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer"><small>% of avarage rate of the visits</small></div>
+            </div>
+        </div>
+    </div>
+</div>

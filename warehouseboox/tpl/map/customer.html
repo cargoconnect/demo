@@ -1,0 +1,16 @@
+﻿<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h3">Customer</h1>
+</div>
+
+<div class="wrapper-md" ng-controller="MapController">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Customer Map
+        </div>
+        <div class="map-tracking">
+            <map ng-transclude class="google-map" center="map.center" options="map.options" zoom="6">
+                <points coords="points.coords" options="points.options" events="points.events" decimals="points.decimals"></points>
+            </map>
+        </div>
+    </div>
+</div>

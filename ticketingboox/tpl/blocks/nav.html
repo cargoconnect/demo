@@ -1,0 +1,261 @@
+<!-- list -->
+
+<ul class="nav">
+    <li>
+        <div class="text-center">
+            <a ui-sref="app.page.profile">
+                <span class="thumb-lg w-auto-folded avatar m-t-sm">
+                    <img src="img/a0.jpg" class="img-full" alt="...">
+                </span>
+            </a>
+            <a href class="dropdown-toggle hidden-folded" dropdown-toggle>
+                <span class="clear">
+                    <span class="block m-t-sm">
+                        <strong class="font-bold text-lt">John.Smith</strong>
+                    </span>
+                    <span class="text-muted text-xs block">Manager</span>
+                </span>
+            </a>
+        </div>
+    </li>
+    <li class="line dk"></li>
+    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+        <span translate="aside.nav.HEADER">Navigation</span>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.dashboard-v1">
+            <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+            <span class="font-bold">Dashboard</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.calendar">
+            <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+            <span class="font-bold" translate="aside.nav.CALENDAR">Calendar</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.mail.list">
+            <b class="badge bg-info pull-right">9</b>
+            <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+            <span class="font-bold" translate="aside.nav.EMAIL">Email</span>
+        </a>
+    </li>
+
+    <li class="line dk"></li>
+
+    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+        <span translate="aside.nav.components.COMPONENTS">Components</span>
+    </li>
+    <li ng-class="{active:$state.includes('app.table')}">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <b class="label bg-success pull-right">2</b>
+            <i class="fa fa-ticket"></i>
+            <span>Ticket</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="app.trip.trip">
+                    <span>Ticket</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.trip.report">
+                    <span>Report</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-class="{active:$state.includes('app.table')}">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <b class="label bg-success pull-right">2</b>
+            <i class="fa fa-bell"></i>
+            <span>Knowledge</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="app.trip.trip">
+                    <span>Knowledge</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.trip.report">
+                    <span>Report</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-class="{active:$state.includes('app.table')}">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <b class="label bg-success pull-right">10</b>
+            <i class="fa fa-money"></i>
+            <span>Revenue</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="app.cost.cost">
+                    <span>Cost</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.cost.revenue">
+                    <span>Revenue</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.cost.report">
+                    <span>Report</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-class="{active:$state.includes('app.table')}">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <i class="fa fa-file"></i>
+            <span>Claim</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="app.claim.claim">
+                    <span>Claim</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-class="{active:$state.includes('app.table')}">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <i class="fa fa-globe"></i>
+            <span>Map-Tracking</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="app.map.shipment">
+                    <span>Tickets</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.map.customer">
+                    <span>Customers</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-class="{active:$state.includes('app.table')}">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <i class="fa fa-database"></i>
+            <span>Master Data</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.user">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.customer">
+                    <span>Types</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.driver">
+                    <span>Items</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.truck">
+                    <span>Priorities</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.truck">
+                    <span>Impacts</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.truck">
+                    <span>Responses</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.truck">
+                    <span>Status</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.master.truck">
+                    <span>Task Status</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-class="{active:$state.includes('app.table')}">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <i class="fa fa-cog"></i>
+            <span>Setting</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="app.map.shipment">
+                    <span>Users</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.map.customer">
+                    <span>Groups</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.map.customer">
+                    <span>Sites</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="line dk hidden-folded"></li>
+
+    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+        <span translate="aside.nav.your_stuff.YOUR_STUFF">Your Stuff</span>
+    </li>
+    <li>
+        <a ui-sref="app.page.profile">
+            <i class="icon-user icon text-success-lter"></i>
+            <b class="badge bg-success pull-right">30%</b>
+            <span translate="aside.nav.your_stuff.PROFILE">Profile</span>
+        </a>
+    </li>
+    <li>
+        <a ui-sref="app.docs">
+            <i class="icon-question icon"></i>
+            <span translate="aside.nav.your_stuff.DOCUMENTS">Documents</span>
+        </a>
+    </li>
+</ul>
+<!-- / list -->
